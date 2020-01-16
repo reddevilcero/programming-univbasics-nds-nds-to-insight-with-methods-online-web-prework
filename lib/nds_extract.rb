@@ -15,8 +15,8 @@ end
 # using director_data as input
 def gross_for_director(director_data)
 
-  total_for_director = 0    
-      
+  total_for_director = 0
+
   director_data[:movies].each { |movie|
     total_for_director += movies[:worldwide_gross]
     }
