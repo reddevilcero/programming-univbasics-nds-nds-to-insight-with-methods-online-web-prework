@@ -19,4 +19,3 @@ def gross_for_director(director_data)
     puts movie
     }
 end
-
