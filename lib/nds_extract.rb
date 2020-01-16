@@ -8,7 +8,13 @@ require 'directors_database'
 def directors_totals(nds)
   result = {}
 
-  nil
+  for director in nds
+      result[director[:name]] = 0
+      director[:movies].each { |movie|
+        result[director[:name]] += movie[:worldwide_gross]
+      }
+    end
+    return result
 end
 
 # Find a way to accumulate the :worldwide_grosses and return that Integer
